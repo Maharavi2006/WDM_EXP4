@@ -18,8 +18,8 @@
 import pandas as pd
 df=pd.read_csv('/content/clustervisitor.csv')
 df
-```
-```
+
+
 cluster={"Young":(df['Age']<=30),"Middle":(df['Age']>30)&(df['Age']<=50),"Old":(df['Age']>50)}
 for group,condition in cluster.items():
   visitors=df[condition]
@@ -27,8 +27,8 @@ for group,condition in cluster.items():
   print(visitors)
   print(len(visitors))
   print("count=",len(visitors))
-```
-```
+
+
 from sklearn.preprocessing import StandardScaler
 from sklearn.cluster import KMeans
 df1=df['Age']
@@ -59,8 +59,8 @@ plt.xlabel('Age Groups')
 plt.ylabel('Number of Visitors')
 plt.title('Visitor Distribution Across Age Groups')
 plt.show()
-```
-```
+
+
 
 
 import matplotlib.pyplot as plt
